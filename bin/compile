@@ -14,14 +14,14 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-cp -r $BUILDPACK_DIR/openfire  $BUILD_DIR
+#cp -r $BUILDPACK_DIR/openfire  $BUILD_DIR
 
 
 # ---------------------------------------------------------------------------- #
-# Nginx 起動スクリプト(boot.sh)作成                                            #
+# Nginx 起動スクリプト(boot.sh)実行                                            #
 # ---------------------------------------------------------------------------- #
-
-cp BUILDPACK_DIR/download/openfire .
+cd $BUILDPACK_DIR
+./download/openfire
 
 # ---------------------------------------------------------------------------- #
 # キャッシュディレクトリをクリア                                               #
